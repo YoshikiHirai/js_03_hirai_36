@@ -1,0 +1,413 @@
+
+  body {
+    font-family: 'メイリオ', 'Meiryo', sans-serif;
+    text-align: center;
+    font-size: 48px;
+    max-width: 2400px;
+    margin: auto;
+    background-image: url(../imgs/top.JPG);
+    background-size: cover;              
+    background-attachment: fixed;       
+    background-position: center center; 
+     }
+  
+
+.top{
+    width: 100%;
+    height:600px;
+    width: 2400px;
+    text-align: center;
+}
+
+main {
+    border-bottom:1px solid #ccc;
+}
+
+header {
+    width: 2400px;
+    background-image: url(../imgs/header_img.jpg)
+}
+
+p{
+    font-family: 'メイリオ', 'Meiryo', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+
+/* コンセプト */
+.concept {
+    height: 450px;
+}
+
+.concept_ttl{
+    margin-bottom: 30px;
+}
+
+.concept_dcp{
+    font-size: 40px;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+/* トップのスライドショー作成～コントローラー付～ */
+.slider {
+    position: relative;
+    width: 1800px;
+    height: 1000px;
+    padding: 0;
+    margin: 1rem auto;
+    box-sizing: unset;
+    margin-top: 300px;
+  }
+  .slider .slide {
+    width: 1800x;
+    height: 1000px;
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .slider .slide img {
+    padding: 0;
+    margin: 0;
+    width: 1800px;
+    height: 1000px;
+  }
+  
+  .slider .slide ul {
+    width: 1800px;
+    height: 1000px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    list-style: none;
+    font-size: 0;
+    position: relative;
+  }
+  .slider .slide li {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+  }
+  
+  .slide li:nth-of-type(1) {
+    left: 0px;
+  }
+  .slide li:nth-of-type(2) {
+    left: 1800px;
+  }
+  .slide li:nth-of-type(3) {
+    left: 3600px;
+  }
+  .slide li:nth-of-type(4) {
+    left: 5400px;
+  }
+  .slide li:nth-of-type(5) {
+    left: 7200px;
+  }
+
+  .controller {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    margin-top: 60px ;
+    margin-bottom: 60px ;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .controller .prev-btn {
+    margin-left: 3rem;
+    cursor: pointer;
+    color: #181818;
+  }
+  .controller .next-btn {
+    margin-right: 3rem;
+    cursor: pointer;
+    color: #181818;
+  }
+  
+  .controller .indicator {
+    display: flex;
+    width: 150px;
+    height: 30px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    background: #181818;
+    border-radius: 20px;
+    border-bottom:1px solid #ccc;
+  }
+  
+  .indicator span {
+    width: 8px;
+    height: 8px;
+    background: whitesmoke;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0 4px 0 4px;
+  }
+  
+  #active {
+    background: red;
+  }
+
+/* 以上、スライダー */
+
+.start_ttl {
+    margin-top: 250px;
+    margin-bottom: 100px;
+}
+
+.start_btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.start_btn_cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 2em;
+    width: 460px;
+    color: #22b13a;
+    font-size: 24px;
+    font-weight: 700;
+    border: 3px solid #a0d3b5;
+    border-radius: 10px;
+    font-size: 40px;
+    font:bold;
+}
+
+.start_btn_cnt a::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #2285b1;
+    border-right: 3px solid #2285b1;
+    transform: rotate(45deg);
+  }
+  
+.start_btn_cnt a:hover {
+    color: #333333;
+    text-decoration: none;
+    background-color: #a0c4d3;
+  }
+  
+.start_btn_cnt a:hover::after {
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+  }
+
+#non-display {
+    display: none;
+}
+
+
+/* 以下問診画面のcss */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+#inquiry {
+    width: 1800px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+
+.inquiry-table {
+    margin:auto;
+    width: 1800px;
+    margin-bottom: 20px;
+    border: 1px solid #22b13a;
+}
+
+.inquiry-item,
+.inquiry-body {
+    padding: 20px;
+    border: 1px solid #22b13a;
+    text-align: left;
+}
+
+.inquiry-item {
+    width: 30%;
+    background-color:  rgb(205, 231, 192);
+}
+
+.inquiry-body {
+    width: 70%;
+    background-color: white;
+}
+
+.form-text {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-width: 400px;
+    font-size: 28px;
+}
+
+#calc {
+    margin-left: 200px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.form-select {
+    width: 180px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #22b13a;
+    border-radius: 5px;
+}
+
+
+#result-btn {
+    width: 300px;
+    height: 120px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin: 60px auto;
+    font-size: 45px;
+    padding: 15px;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+#result-btn2 {
+  width: 300px;
+  height: 120px;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  display: block;
+  margin: 60px auto;
+  font-size: 45px;
+  padding: 15px;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+/* 問診画面のcss終わり */
+
+/* resultのCSS */
+
+* {
+    box-sizing: border-box;
+}
+
+#riskfac {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+
+.riskfac-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 0.3px solid #22b13a;
+}
+
+.riskfac-item,
+.riskfac-body,
+.riskfac-chk,
+.riskfac {
+    padding: 20px;
+    border: 0.3px solid #22b13a;
+    background-color: white;
+}
+
+.riskfac-top {
+    text-align: center;
+    background-color: #eee;
+
+}
+
+.riskfac-item {
+    width: 20%;
+    background-color: rgb(205, 231, 192);
+}
+
+
+.riskfac-body {
+    width: 65%;
+    text-align: left;
+}
+
+.riskfac-chk {
+    width: 15%;
+    text-align: center;
+    vertical-align: center; 
+    text-align: center;
+    vertical-align: center; 
+    font-size: 80px;
+    color: #22b13a;
+    font: bold;
+    box-sizing:border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 30px;
+    position: relative;
+  }
+
+
+#risk-bmi
+#risk-fam
+#risk-tooth
+#risk-smk
+#risk-psv {
+    text-align: center;
+    vertical-align: center; 
+    font-size: 80px;
+    color: #22b13a;
+    font: bold;
+}
+
+#log {  
+    width: 1200px;
+    width: 100%;
+    margin: auto;
+    margin-top: 60px;
+    padding: 60px 0;
+    border: 1px solid #22b13a;
+    background-color: white;
+  }
+.log-day{
+    width:28%
+}
+.log-hei .log-wei .log-bmi .log-risk{
+  width:18%
+}
+
+.checkbo
+
+footer {
+    margin-top: 600px;
+    background: #70BF54;
+    color:#fff;
+}

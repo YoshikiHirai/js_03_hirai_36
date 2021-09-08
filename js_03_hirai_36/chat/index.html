@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <title>マイ検診プラン</title>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+</head>
+
+<body>
+
+  <!-- ログイン用UI -->
+  <p>Hello, Firebase Hosting!</p>
+    <div id="firebaseui-auth-container"></div>
+  <!-- ログイン用UI -->
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- JQuery -->
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var firebaseConfig = {
+      apiKey: "AIzaSyB4nu9ucCeAA9Y75bs_ZJSub1-JlfO2yCI",
+      authDomain: "gskadai3.firebaseapp.com",
+      databaseURL: "https://gskadai3-default-rtdb.firebaseio.com/",
+      projectID: "gskadai3",
+      storageBucket: "gskadai3.appspot.com",
+      messagingSenderId: "315096599480",
+      appId: "1:315096599480:web:badc4fbba256742ddf1d4d"      
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+<!-- ログイン用Script -->
+  <script type="text/javascript">
+    let uiConfig = {
+        callbacks: {
+          signInSuccessWithAuthResult: function () {
+          console.log("ログイン成功") 
+          return true;
+          },
+            },
+            signInSuccessUrl: './mykenshin.html', //ログインに成功した場合に、ページ遷移
+            signInOptions: [
+            firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            ],
+        };
+        let ui = new firebaseui.auth.AuthUI(firebase.auth());   
+        ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
+
+</body>
+
+</html>
