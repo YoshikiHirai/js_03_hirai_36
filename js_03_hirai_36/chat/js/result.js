@@ -2,7 +2,7 @@
 
 // firebaseの設定
 const firebaseConfig = {
-  apiKey: "AIzaSyB4nu9ucCeAA9Y75bs_ZJSub1-JlfO2yCI",
+  apiKey: "",
   authDomain: "gskadai3.firebaseapp.com",
   databaseURL: "https://gskadai3-default-rtdb.firebaseio.com/",
   projectID: "gskadai3",
